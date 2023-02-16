@@ -20,7 +20,7 @@ export const theme = {
       xhuge: '6.4rem',
     },
   },
-  spaces: {
+  spacings: {
     xsmall: '8rem',
     small: '1.6rem',
     medium: '2.4rem',
