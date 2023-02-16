@@ -1,20 +1,17 @@
 import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
-import { theme } from '../../styles/theme';
 import { MenuLink } from '.';
-
-describe('<MenuLink/>', () => {
+describe('<MenuLink />', () => {
   it('should render a link', () => {
-    renderTheme(<MenuLink link="https://google.com.br">Children</MenuLink>);
+    renderTheme(<MenuLink link="http://localhost">Children</MenuLink>);
     expect(screen.getByRole('link', { name: 'Children' })).toHaveAttribute(
       'target',
       '_self',
     );
   });
-
   it('should render open in a new tab', () => {
     renderTheme(
-      <MenuLink link="https://google.com.br" newTab={true}>
+      <MenuLink link="http://localhost" newTab={true}>
         Children
       </MenuLink>,
     );
@@ -23,14 +20,14 @@ describe('<MenuLink/>', () => {
       '_blank',
     );
   });
-
   it('should render open in a new tab', () => {
-    const { container } = renderTheme(
-      <MenuLink link="https://google.com.br" newTab={true}>
+    renderTheme(
+      <MenuLink link="http://localhost" newTab={false}>
         Children
       </MenuLink>,
     );
-    expect(container.firstChild).toMatchInlineSnapshot(`
+    expect(screen.getByRole('link', { name: 'Children' }))
+      .toMatchInlineSnapshot(`
       .c0 {
         display: block;
         -webkit-text-decoration: none;
@@ -60,8 +57,8 @@ describe('<MenuLink/>', () => {
 
       <a
         class="c0"
-        href="https://google.com.br"
-        target="_blank"
+        href="http://localhost"
+        target="_self"
       >
         Children
       </a>

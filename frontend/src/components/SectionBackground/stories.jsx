@@ -21,11 +21,3 @@ export default {
     children: { type: '' },
   },
 };
-
-export const Template = (args) => {
-  return (
-    <div>
-      <SectionBackground {...args} />
-    </div>
-  );
-};
