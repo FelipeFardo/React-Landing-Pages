@@ -10,13 +10,12 @@ export const Base = ({ links, logoData, footerHtml, children }) => {
       <Menu links={links} logoData={logoData} />
       <Styled.Container>
         {children}
-        <Footer footerHtml={footerHtml} />
+        <Footer html={footerHtml} />
       </Styled.Container>
       <GoTop />
     </>
   );
 };
-
 Base.propTypes = {
   children: P.node.isRequired,
   ...Menu.propTypes,

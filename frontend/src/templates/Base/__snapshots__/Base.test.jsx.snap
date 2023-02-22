@@ -160,19 +160,28 @@ exports[`<Base /> should render 1`] = `
   overflow: hidden;
 }
 
+.c16 {
+  font-size: 2.4rem;
+}
+
 .c23 {
   text-align: center;
+  border-top: 0.1rem solid #DDD;
 }
 
 .c23 a {
   color: inherit;
   -webkit-text-decoration: none;
   text-decoration: none;
+}
+
+.c23 .c15 {
   font-size: 1.6rem;
 }
 
-.c16 {
-  font-size: 2.4rem;
+.c23 .c3 {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .c24 {
@@ -197,6 +206,36 @@ exports[`<Base /> should render 1`] = `
   right: 2rem;
   z-index: 6;
   opacity: 0.7;
+}
+
+.c13 .c15 {
+  margin-bottom: 6.4rem;
+}
+
+.c17 {
+  counter-reset: grid-counter;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 3.2rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.c18 .c6 {
+  position: relative;
+  left: 5rem;
+}
+
+.c18 .c6::before {
+  counter-increment: grid-counter;
+  content: counter(grid-counter);
+  position: absolute;
+  font-size: 7rem;
+  top: -3rem;
+  left: -5rem;
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 
 .c12 {
@@ -227,34 +266,6 @@ exports[`<Base /> should render 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.c13 .c15 {
-  margin-bottom: 6.4rem;
-}
-
-.c17 {
-  counter-reset: grid-counter;
-  display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
-  gap: 3.2rem;
-}
-
-.c18 .c6 {
-  position: relative;
-  left: 5rem;
-}
-
-.c18 .c6::before {
-  counter-increment: grid-counter;
-  content: counter(grid-counter);
-  position: absolute;
-  font-size: 7rem;
-  top: -3rem;
-  left: -5rem;
-  -webkit-transform: rotate(5deg);
-  -ms-transform: rotate(5deg);
-  transform: rotate(5deg);
 }
 
 @media (max-width:768px) {
@@ -340,6 +351,12 @@ exports[`<Base /> should render 1`] = `
     -webkit-align-content: center;
     -ms-flex-line-pack: center;
     align-content: center;
+  }
+}
+
+@media (max-width:768px) {
+  .c17 {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -864,7 +881,11 @@ exports[`<Base /> should render 1`] = `
       >
         <div
           class="c15 c16"
-        />
+        >
+          <p>
+            Teste de footer
+          </p>
+        </div>
       </div>
     </div>
   </div>
