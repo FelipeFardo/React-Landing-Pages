@@ -1,12 +1,18 @@
 import P from 'prop-types';
 import * as Styled from './styles';
 import { SectionBackground } from '../SectionBackground';
-import { TextComponent } from '../TextComponent';
 import { Heading } from '../Heading';
+import { TextComponent } from '../TextComponent';
 
-export const GridTwoColumns = ({ title, text, srcImg, background = false }) => {
+export const GridTwoColumns = ({
+  title,
+  text,
+  srcImg,
+  background = false,
+  sectionId = '',
+}) => {
   return (
-    <SectionBackground background={background}>
+    <SectionBackground background={background} sectionId={sectionId}>
       <Styled.Container background={background}>
         <Styled.TextContainer>
           <Heading uppercase colorDark={!background} as="h2">
@@ -15,7 +21,7 @@ export const GridTwoColumns = ({ title, text, srcImg, background = false }) => {
           <TextComponent>{text}</TextComponent>
         </Styled.TextContainer>
         <Styled.ImageContainer>
-          <Styled.Image src={srcImg} alt={title}></Styled.Image>
+          <Styled.Image src={srcImg} alt={title} />
         </Styled.ImageContainer>
       </Styled.Container>
     </SectionBackground>
@@ -23,8 +29,9 @@ export const GridTwoColumns = ({ title, text, srcImg, background = false }) => {
 };
 
 GridTwoColumns.propTypes = {
-  title: P.node.isRequired,
-  text: P.node.isRequired,
-  srcImg: P.node.isRequired,
+  title: P.string.isRequired,
+  text: P.string.isRequired,
+  srcImg: P.string.isRequired,
   background: P.bool,
+  sectionId: P.string,
 };

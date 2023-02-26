@@ -1,8 +1,7 @@
-const { createGlobalStyle } = require('styled-components');
+import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-
-  *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.family.default};
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.font.family.secondary};
     margin: ${({ theme }) => theme.spacings.large} 0;
   }
@@ -29,10 +28,15 @@ export const GlobalStyles = createGlobalStyle`
 
   ul, ol {
     margin: ${({ theme }) => theme.spacings.medium};
-    padding:${({ theme }) => theme.spacings.medium};
+    padding: ${({ theme }) => theme.spacings.medium};
   }
 
   a {
-    color:  ${({ theme }) => theme.colors.secondaryColor};
+    color: ${({ theme }) => theme.colors.secondaryColor};
+  }
+
+  .table {
+    width: 100%;
+    overflow-y: auto;
   }
 `;
