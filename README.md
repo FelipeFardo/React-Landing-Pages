@@ -4,7 +4,7 @@
 
 # Sobre o projeto
 
-Este projeto visa facilitar a criação de landing pages usando o React para reaproveitar componentes. É possível criar novas landing pages diferentes adicionando o conteúdo da nova página, a ser criada, às seção por meio do Strapi. 
+Este projeto visa facilitar a criação de landing pages usando o React para reaproveitar componentes. É possível criar novas landing pages diferentes adicionando o conteúdo da nova página, a ser criada, às seções por meio do Strapi. 
 
 ## Layout Web
 
