@@ -1,4 +1,4 @@
-# Project Landing Page
+# Projeto Landing Page
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/FelipeFardo/React-Landing-Pages/blob/main/LICENSE)
 
